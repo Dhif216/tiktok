@@ -1,3 +1,5 @@
+import { useLanguage } from '../i18n'
+
 const steps = [
   {
     num: '01',
@@ -22,6 +24,8 @@ const steps = [
 ]
 
 export default function HowItWorks() {
+  const { translate } = useLanguage()
+
   return (
     <section id="how-it-works" className="py-20 md:py-28 relative overflow-hidden">
       <div
@@ -32,11 +36,11 @@ export default function HowItWorks() {
       />
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="section-label mb-4">The Process</div>
+          <div className="section-label mb-4">{translate('The Process')}</div>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
-            Four steps to becoming
+            {translate('Four steps to becoming')}
             <br />
-            <span className="aurora-text">a Nordlys creator.</span>
+            <span className="aurora-text">{translate('a Nordlys creator.')}</span>
           </h2>
         </div>
 
@@ -68,7 +72,7 @@ export default function HowItWorks() {
                     </span>
                   </div>
                 </div>
-                <h3 className="font-display font-bold text-xl text-white mb-3">{s.title}</h3>
+                <h3 className="font-display font-bold text-xl text-white mb-3">{translate(s.title)}</h3>
                 <p className="text-sm text-[#8892b8] leading-relaxed">{s.desc}</p>
               </div>
             ))}
@@ -80,7 +84,7 @@ export default function HowItWorks() {
             href="#apply"
             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-base px-8 py-4 rounded-full hover:shadow-[0_0_40px_rgba(245,185,66,0.45)] transition-all hover:-translate-y-0.5"
           >
-            Start Your Application
+            {translate('Start Your Application')}
           </a>
         </div>
       </div>

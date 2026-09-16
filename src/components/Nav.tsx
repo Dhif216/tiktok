@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useLanguage, type Language } from '../i18n'
 
 interface NavProps {
   menuOpen: boolean
@@ -15,6 +16,7 @@ const links = [
 
 export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
   const [scrolled, setScrolled] = useState(false)
+  const { language, setLanguage, translate } = useLanguage()
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40)
@@ -54,7 +56,7 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
               href={l.href}
               className="text-sm text-[#8892b8] hover:text-white transition-colors font-medium"
             >
-              {l.label}
+              {translate(l.label)}
             </a>
           ))}
         </nav>
@@ -64,8 +66,22 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
           href="#apply"
           className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,185,66,0.45)] transition-all"
         >
-          Join Our Agency
+          {translate('Join Our Agency')}
         </a>
+        <label className="hidden md:flex items-center gap-2 text-xs text-[#a99367]">
+          <span className="sr-only">Language</span>
+          <select
+            value={language}
+            onChange={event => setLanguage(event.target.value as Language)}
+            className="bg-[#0e0d0a] border border-[rgba(245,185,66,0.3)] rounded-md px-2 py-1 text-[#ffd166] uppercase focus:outline-none focus:border-[#f5b942]"
+            aria-label="Language"
+          >
+            <option value="en">EN</option>
+            <option value="fi">FI</option>
+            <option value="sv">SV</option>
+            <option value="no">NO</option>
+          </select>
+        </label>
 
         {/* Mobile hamburger */}
         <button
@@ -105,7 +121,7 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
               onClick={() => setMenuOpen(false)}
               className="text-lg font-medium text-[#c8d0f0] hover:text-white transition-colors"
             >
-              {l.label}
+              {translate(l.label)}
             </a>
           ))}
           <a
@@ -113,8 +129,22 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
             onClick={() => setMenuOpen(false)}
             className="mt-2 inline-flex items-center justify-center bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold px-6 py-3 rounded-full"
           >
-            Join Our Agency
+            {translate('Join Our Agency')}
           </a>
+          <label className="flex items-center justify-between gap-3 text-sm text-[#a99367]">
+            <span>Language</span>
+            <select
+              value={language}
+              onChange={event => setLanguage(event.target.value as Language)}
+              className="bg-[#0e0d0a] border border-[rgba(245,185,66,0.3)] rounded-md px-2 py-1 text-[#ffd166] uppercase focus:outline-none focus:border-[#f5b942]"
+              aria-label="Language"
+            >
+              <option value="en">EN</option>
+              <option value="fi">FI</option>
+              <option value="sv">SV</option>
+              <option value="no">NO</option>
+            </select>
+          </label>
         </div>
       </div>
     </header>

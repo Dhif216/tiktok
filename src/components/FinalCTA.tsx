@@ -1,4 +1,8 @@
+import { useLanguage } from '../i18n'
+
 export default function FinalCTA() {
+  const { translate } = useLanguage()
+
   return (
     <section className="py-20 md:py-32 relative overflow-hidden">
       <div
@@ -19,7 +23,7 @@ export default function FinalCTA() {
       />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <div className="section-label mb-6">Ready?</div>
+        <div className="section-label mb-6">{translate('Ready?')}</div>
         <h2 className="font-display font-black text-5xl md:text-6xl lg:text-7xl text-white leading-[1.05] mb-6">
           Ready to Take Your
           <br />
@@ -34,7 +38,7 @@ export default function FinalCTA() {
             href="#apply"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-base px-10 py-4 rounded-full hover:shadow-[0_0_50px_rgba(245,185,66,0.45)] transition-all hover:-translate-y-1"
           >
-            Become a Creator
+            {translate('Become a Creator')}
           </a>
           <a
             href="#benefits"

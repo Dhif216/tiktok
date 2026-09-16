@@ -1,3 +1,5 @@
+import { useLanguage } from '../i18n'
+
 const benefits = [
   {
     icon: (
@@ -62,15 +64,17 @@ const benefits = [
 ]
 
 export default function Benefits() {
+  const { translate } = useLanguage()
+
   return (
     <section id="benefits" className="py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="section-label mb-4">What You Get</div>
+          <div className="section-label mb-4">{translate('What You Get')}</div>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
-            Built for creators who
+            {translate('Built for creators who')}
             <br />
-            <span className="aurora-text">take this seriously.</span>
+            <span className="aurora-text">{translate('take this seriously.')}</span>
           </h2>
           <p className="mt-5 text-[#8892b8] max-w-xl mx-auto text-base leading-relaxed">
             Every benefit is designed around one goal: helping you create confidently, consistently, and sustainably.
@@ -89,7 +93,7 @@ export default function Benefits() {
               >
                 {b.icon}
               </div>
-              <h3 className="font-semibold text-lg text-white mb-2">{b.title}</h3>
+              <h3 className="font-semibold text-lg text-white mb-2">{translate(b.title)}</h3>
               <p className="text-sm text-[#8892b8] leading-relaxed">{b.desc}</p>
             </div>
           ))}

@@ -1,4 +1,5 @@
 import giftFeature from '../../b13105782e8bf8fbefaa83b7af413cee~tplv-obj.webp'
+import { useLanguage } from '../i18n'
 import giftOne from '../assets/gifts/01793f9afe15f5037a9dc10435c37c85.png~tplv-obj.webp'
 import giftTwo from '../assets/gifts/0e1bd6f089b9817a6d3f0cb18915038d.png~tplv-obj.webp'
 import giftThree from '../assets/gifts/26b1c4e777cc486ae489ea7033ad8cbc.png~tplv-obj.webp'
@@ -18,6 +19,8 @@ const gifts = [
 ]
 
 export default function WelcomeGift() {
+  const { translate } = useLanguage()
+
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
       <div
@@ -45,12 +48,12 @@ export default function WelcomeGift() {
             </div>
           </div>
 
-          <div className="section-label mb-4">Welcome Gift</div>
+          <div className="section-label mb-4">{translate('Welcome Gift')}</div>
 
           <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-6">
-            Join. Get Started.
+            {translate('Join. Get Started.')}
             <br />
-            <span className="aurora-text">Get Welcomed.</span>
+            <span className="aurora-text">{translate('Get Welcomed.')}</span>
           </h2>
 
           <p className="text-[#8892b8] text-lg leading-relaxed mb-6 max-w-2xl">
@@ -76,7 +79,7 @@ export default function WelcomeGift() {
             href="#apply"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-base px-8 py-4 rounded-full hover:shadow-[0_0_40px_rgba(245,185,66,0.4)] transition-all hover:-translate-y-0.5"
           >
-            Apply Now
+            {translate('Apply Now')}
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

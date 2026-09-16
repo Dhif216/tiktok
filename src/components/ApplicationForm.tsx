@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLanguage } from '../i18n'
 
 const categories = [
   'Dance & Entertainment',
@@ -36,6 +37,7 @@ const coinRanges = [
 export default function ApplicationForm() {
   const [submitted, setSubmitted] = useState(false)
   const [consent, setConsent] = useState(false)
+  const { translate } = useLanguage()
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -49,7 +51,7 @@ export default function ApplicationForm() {
           <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#b87916] to-[#ffd166] flex items-center justify-center text-4xl mx-auto mb-6">
             ✓
           </div>
-          <h2 className="font-display font-bold text-4xl text-white mb-4">Application Received</h2>
+          <h2 className="font-display font-bold text-4xl text-white mb-4">{translate('Application Received')}</h2>
           <p className="text-[#8892b8] text-lg leading-relaxed">
             Thank you for applying. Our team will review your application and reach out within 3–7 business days.
             Keep creating — we'll be in touch.
@@ -70,10 +72,10 @@ export default function ApplicationForm() {
       />
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-12">
-          <div className="section-label mb-4">Apply Now</div>
+          <div className="section-label mb-4">{translate('Apply Now')}</div>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
-            Become a
-            <span className="aurora-text"> Nordlys creator.</span>
+            {translate('Become a')}
+            <span className="aurora-text"> {translate('Nordlys creator.')}</span>
           </h2>
           <p className="text-[#8892b8] text-base">
             Fill out your application below. We review every submission personally.
@@ -102,7 +104,7 @@ export default function ApplicationForm() {
 
           <div>
             <label className="block text-sm font-medium text-[#c8d0f0] mb-2">
-              Why do you want to join Nordlys?
+              {translate('Why do you want to join Nordlys?')}
             </label>
             <textarea
               name="why"
@@ -154,7 +156,7 @@ export default function ApplicationForm() {
               boxShadow: consent ? '0 0 30px rgba(245,185,66,0.3)' : 'none',
             }}
           >
-            Submit Application
+            {translate('Submit Application')}
           </button>
         </form>
       </div>
@@ -167,9 +169,11 @@ function Field({
 }: {
   label: string; name: string; type: string; placeholder: string; required?: boolean
 }) {
+  const { translate } = useLanguage()
+
   return (
     <div>
-      <label className="block text-sm font-medium text-[#c8d0f0] mb-2">{label}</label>
+      <label className="block text-sm font-medium text-[#c8d0f0] mb-2">{translate(label)}</label>
       <input
         type={type}
         name={name}
@@ -186,9 +190,11 @@ function SelectField({
 }: {
   label: string; name: string; options: string[]; required?: boolean
 }) {
+  const { translate } = useLanguage()
+
   return (
     <div>
-      <label className="block text-sm font-medium text-[#c8d0f0] mb-2">{label}</label>
+      <label className="block text-sm font-medium text-[#c8d0f0] mb-2">{translate(label)}</label>
       <select
         name={name}
         required={required}
@@ -196,7 +202,7 @@ function SelectField({
         className="w-full rounded-xl bg-[#0e0d0a] border border-[rgba(245,185,66,0.16)] text-[#fff8e7] text-sm px-4 py-3 focus:outline-none focus:border-[rgba(245,185,66,0.55)] focus:ring-1 focus:ring-[rgba(245,185,66,0.3)] transition-colors appearance-none"
         style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%238892b8' strokeWidth='1.5' fill='none' strokeLinecap='round'/%3E%3C/svg%3E\")", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center' }}
       >
-        <option value="" disabled className="text-[#8892b8]">Select…</option>
+        <option value="" disabled className="text-[#8892b8]">{translate('Select…')}</option>
         {options.map(o => <option key={o} value={o}>{o}</option>)}
       </select>
     </div>

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLanguage } from '../i18n'
 
 const tiers = [
   {
@@ -46,6 +47,7 @@ const tiers = [
 
 export default function Rewards() {
   const [active, setActive] = useState(2)
+  const { translate } = useLanguage()
 
   return (
     <section id="rewards" className="py-20 md:py-28 relative overflow-hidden">
@@ -58,7 +60,7 @@ export default function Rewards() {
       />
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="section-label mb-4">Monthly Rewards</div>
+          <div className="section-label mb-4">{translate('Monthly Rewards')}</div>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
             Consistency pays.
             <br />

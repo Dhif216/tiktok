@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLanguage } from '../i18n'
 
 const faqs = [
   {
@@ -45,6 +46,7 @@ const faqs = [
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null)
+  const { translate } = useLanguage()
 
   return (
     <section id="faq" className="py-20 md:py-28">
@@ -70,7 +72,7 @@ export default function FAQ() {
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
               >
-                <span className="font-medium text-white text-sm leading-snug">{faq.q}</span>
+                <span className="font-medium text-white text-sm leading-snug">{translate(faq.q)}</span>
                 <span
                   className="flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all"
                   style={{
@@ -88,7 +90,7 @@ export default function FAQ() {
                 className="overflow-hidden transition-all duration-300"
                 style={{ maxHeight: open === i ? '200px' : '0' }}
               >
-                <p className="px-6 pb-5 text-sm text-[#8892b8] leading-relaxed">{faq.a}</p>
+                <p className="px-6 pb-5 text-sm text-[#8892b8] leading-relaxed">{translate(faq.a)}</p>
               </div>
             </div>
           ))}

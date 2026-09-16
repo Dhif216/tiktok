@@ -11,6 +11,7 @@ import FAQ from './components/FAQ'
 import ApplicationForm from './components/ApplicationForm'
 import FinalCTA from './components/FinalCTA'
 import Footer from './components/Footer'
+import { LanguageProvider } from './i18n'
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -25,21 +26,23 @@ export default function App() {
   }, [menuOpen])
 
   return (
-    <div className="min-h-screen bg-[#050505] text-[#fff8e7]">
-      <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <main>
-        <Hero />
-        <Stats />
-        <Benefits />
-        <HowItWorks />
-        <Rewards />
-        <AccountSupport />
-        <WelcomeGift />
-        <FAQ />
-        <ApplicationForm />
-        <FinalCTA />
-      </main>
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen bg-[#050505] text-[#fff8e7]">
+        <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <main>
+          <Hero />
+          <Stats />
+          <Benefits />
+          <HowItWorks />
+          <Rewards />
+          <AccountSupport />
+          <WelcomeGift />
+          <FAQ />
+          <ApplicationForm />
+          <FinalCTA />
+        </main>
+        <Footer />
+      </div>
+    </LanguageProvider>
   )
 }

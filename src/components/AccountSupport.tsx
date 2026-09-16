@@ -1,3 +1,5 @@
+import { useLanguage } from '../i18n'
+
 const issues = [
   'Account restrictions',
   'Dispute assistance',
@@ -8,6 +10,8 @@ const issues = [
 ]
 
 export default function AccountSupport() {
+  const { translate } = useLanguage()
+
   return (
     <section id="support" className="py-20 md:py-28 relative overflow-hidden">
       <div
@@ -20,11 +24,11 @@ export default function AccountSupport() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left */}
           <div>
-            <div className="section-label mb-4">Account Support</div>
+            <div className="section-label mb-4">{translate('Account Support')}</div>
             <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-6">
-              Your account.
+              {translate('Your account.')}
               <br />
-              <span className="aurora-text">Our backup.</span>
+              <span className="aurora-text">{translate('Our backup.')}</span>
             </h2>
             <p className="text-[#8892b8] text-base leading-relaxed mb-8">
               TikTok's creator environment can be unpredictable. When something goes wrong,
@@ -39,7 +43,7 @@ export default function AccountSupport() {
               href="#apply"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-sm px-6 py-3 rounded-full hover:shadow-[0_0_30px_rgba(245,185,66,0.4)] transition-all"
             >
-              Get Protected
+              {translate('Get Protected')}
             </a>
           </div>
 
@@ -58,7 +62,7 @@ export default function AccountSupport() {
               </div>
 
               <div className="space-y-3 mb-6">
-                <div className="section-label text-[10px] text-[#8892b8] mb-4">We help with:</div>
+                <div className="section-label text-[10px] text-[#8892b8] mb-4">{translate('We help with:')}</div>
                 {issues.map(issue => (
                   <div
                     key={issue}
@@ -69,7 +73,7 @@ export default function AccountSupport() {
                         <path d="M2 5l2.5 2.5L8 2.5" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
-                    <span className="text-sm text-[#c8d0f0]">{issue}</span>
+                    <span className="text-sm text-[#c8d0f0]">{translate(issue)}</span>
                   </div>
                 ))}
               </div>

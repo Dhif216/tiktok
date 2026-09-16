@@ -1,3 +1,5 @@
+import { useLanguage } from '../i18n'
+
 const navLinks = [
   { label: 'About', href: '#' },
   { label: 'Creator Benefits', href: '#benefits' },
@@ -43,6 +45,8 @@ const socialLinks = [
 ]
 
 export default function Footer() {
+  const { translate } = useLanguage()
+
   return (
     <footer className="border-t border-[rgba(120,140,220,0.1)] py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -71,12 +75,12 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <div className="section-label mb-5">Navigation</div>
+            <div className="section-label mb-5">{translate('Navigation')}</div>
             <ul className="space-y-3">
               {navLinks.map(l => (
                 <li key={l.label}>
                   <a href={l.href} className="text-sm text-[#8892b8] hover:text-white transition-colors">
-                    {l.label}
+                    {translate(l.label)}
                   </a>
                 </li>
               ))}
@@ -85,7 +89,7 @@ export default function Footer() {
 
           {/* Social & Legal */}
           <div>
-            <div className="section-label mb-5">Follow Us</div>
+            <div className="section-label mb-5">{translate('Follow Us')}</div>
             <div className="flex items-center gap-3 mb-8">
               {socialLinks.map(s => (
                 <a
@@ -102,7 +106,7 @@ export default function Footer() {
               href="#apply"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,185,66,0.4)] transition-all"
             >
-              Join Our Agency
+              {translate('Join Our Agency')}
             </a>
           </div>
         </div>

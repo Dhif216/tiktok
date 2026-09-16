@@ -7,7 +7,7 @@ const benefits = [
     ),
     title: 'Account Protection',
     desc: "We stand behind you when TikTok gets complicated. From restrictions to appeals, you're never navigating it alone.",
-    accent: '#7c5cfc',
+    accent: '#f5b942',
   },
   {
     icon: (
@@ -17,7 +17,7 @@ const benefits = [
     ),
     title: 'Dispute & Account Support',
     desc: 'Direct access to a support team that understands creator accounts. Get help with disputes, platform questions, and operational issues.',
-    accent: '#00e5cc',
+    accent: '#ffd166',
   },
   {
     icon: (
@@ -27,7 +27,7 @@ const benefits = [
     ),
     title: 'Monthly Coin Bonuses',
     desc: 'Hit your monthly coin milestones and unlock bonus rewards. The more consistent you are, the more you earn alongside your TikTok income.',
-    accent: '#e040fb',
+    accent: '#b87916',
   },
   {
     icon: (
@@ -47,7 +47,7 @@ const benefits = [
     ),
     title: 'Creator Community',
     desc: "You're not just signing up — you're joining a network of serious creators. Share knowledge, grow together, get recognized.",
-    accent: '#00e5cc',
+    accent: '#ffd166',
   },
   {
     icon: (
@@ -57,7 +57,7 @@ const benefits = [
     ),
     title: 'Growth Support',
     desc: 'Personal guidance to help you understand what works. Build sustainable creator habits backed by a team invested in your success.',
-    accent: '#7c5cfc',
+    accent: '#f5b942',
   },
 ]
 
@@ -81,7 +81,7 @@ export default function Benefits() {
           {benefits.map(b => (
             <div
               key={b.title}
-              className="group p-7 rounded-2xl bg-[#0d1120] border border-[rgba(120,140,220,0.1)] hover:border-[rgba(124,92,252,0.3)] transition-all duration-300 hover:-translate-y-1"
+              className="group p-7 rounded-2xl bg-[#0e0d0a] border border-[rgba(245,185,66,0.12)] hover:border-[rgba(245,185,66,0.35)] transition-all duration-300 hover:-translate-y-1"
             >
               <div
                 className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"

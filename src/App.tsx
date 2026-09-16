@@ -25,7 +25,7 @@ export default function App() {
   }, [menuOpen])
 
   return (
-    <div className="min-h-screen bg-[#050810] text-[#f0f2ff]">
+    <div className="min-h-screen bg-[#050505] text-[#fff8e7]">
       <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <main>
         <Hero />

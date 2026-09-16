@@ -20,9 +20,9 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         <div className="section-label mb-6 inline-flex items-center gap-2">
-          <span className="w-4 h-[1px] bg-[#00e5cc] inline-block" />
+          <span className="w-4 h-[1px] bg-[#ffd166] inline-block" />
           TikTok Creator Agency
-          <span className="w-4 h-[1px] bg-[#00e5cc] inline-block" />
+          <span className="w-4 h-[1px] bg-[#ffd166] inline-block" />
         </div>
 
         <h1 className="tiktok-title font-display font-black leading-[1.05] mb-6">
@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#apply"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#7c5cfc] to-[#5b3de8] text-white font-semibold text-base px-8 py-4 rounded-full hover:shadow-[0_0_40px_rgba(124,92,252,0.5)] transition-all hover:-translate-y-0.5"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-base px-8 py-4 rounded-full hover:shadow-[0_0_40px_rgba(245,185,66,0.45)] transition-all hover:-translate-y-0.5"
           >
             Join Our Agency
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -61,7 +61,7 @@ export default function Hero() {
           </a>
           <a
             href="#benefits"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[rgba(120,140,220,0.25)] text-[#c8d0f0] font-medium text-base px-8 py-4 rounded-full hover:border-[rgba(124,92,252,0.6)] hover:text-white transition-all"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-[rgba(245,185,66,0.32)] text-[#f4dfaa] font-medium text-base px-8 py-4 rounded-full hover:border-[rgba(255,209,102,0.7)] hover:text-white transition-all"
           >
             See Creator Benefits
           </a>
@@ -83,7 +83,7 @@ export default function Hero() {
 
         <div className="mt-10 flex w-full flex-col items-center gap-3 opacity-55 pointer-events-none">
           <span className="section-label text-[9px] animate-scroll-label">Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-[#7c5cfc] via-[#00e5cc] to-transparent animate-scroll-line" />
+          <div className="w-px h-10 bg-gradient-to-b from-[#b87916] via-[#ffd166] to-transparent animate-scroll-line" />
         </div>
       </div>
     </section>

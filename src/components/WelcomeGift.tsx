@@ -23,7 +23,7 @@ export default function WelcomeGift() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(224,64,251,0.08) 0%, rgba(124,92,252,0.06) 40%, transparent 70%)',
+          background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(245,185,66,0.1) 0%, rgba(184,121,22,0.06) 40%, transparent 70%)',
         }}
       />
       <div className="max-w-4xl mx-auto px-6 text-center">
@@ -32,13 +32,13 @@ export default function WelcomeGift() {
           <div className="relative mb-8">
             <div
               className="absolute inset-0 blur-3xl opacity-40 rounded-full"
-              style={{ background: 'radial-gradient(circle, #e040fb, #7c5cfc)' }}
+              style={{ background: 'radial-gradient(circle, #ffd166, #b87916)' }}
             />
             <div
               className="relative w-24 h-24 rounded-2xl flex items-center justify-center text-5xl"
               style={{
-                background: 'linear-gradient(135deg, rgba(224,64,251,0.2), rgba(124,92,252,0.2))',
-                border: '1px solid rgba(224,64,251,0.3)',
+                background: 'linear-gradient(135deg, rgba(255,209,102,0.2), rgba(184,121,22,0.2))',
+                border: '1px solid rgba(245,185,66,0.35)',
               }}
             >
               <img src={giftFeature} alt="Welcome gift" className="h-20 w-20 object-contain" />
@@ -74,7 +74,7 @@ export default function WelcomeGift() {
 
           <a
             href="#apply"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#e040fb] to-[#7c5cfc] text-white font-semibold text-base px-8 py-4 rounded-full hover:shadow-[0_0_40px_rgba(224,64,251,0.4)] transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-base px-8 py-4 rounded-full hover:shadow-[0_0_40px_rgba(245,185,66,0.4)] transition-all hover:-translate-y-0.5"
           >
             Apply Now
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

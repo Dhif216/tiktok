@@ -62,8 +62,8 @@ export default function FAQ() {
               key={i}
               className="rounded-2xl border transition-all duration-300"
               style={{
-                borderColor: open === i ? 'rgba(124,92,252,0.35)' : 'rgba(120,140,220,0.1)',
-                background: open === i ? 'rgba(124,92,252,0.06)' : '#0d1120',
+                borderColor: open === i ? 'rgba(245,185,66,0.4)' : 'rgba(245,185,66,0.12)',
+                background: open === i ? 'rgba(245,185,66,0.07)' : '#0e0d0a',
               }}
             >
               <button
@@ -74,8 +74,8 @@ export default function FAQ() {
                 <span
                   className="flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all"
                   style={{
-                    borderColor: open === i ? 'rgba(124,92,252,0.5)' : 'rgba(120,140,220,0.2)',
-                    color: open === i ? '#7c5cfc' : '#8892b8',
+                    borderColor: open === i ? 'rgba(245,185,66,0.6)' : 'rgba(245,185,66,0.2)',
+                    color: open === i ? '#f5b942' : '#a99367',
                     transform: open === i ? 'rotate(45deg)' : 'none',
                   }}
                 >

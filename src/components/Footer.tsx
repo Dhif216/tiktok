@@ -51,9 +51,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="relative w-8 h-8">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#7c5cfc] to-[#00e5cc] opacity-80" />
-                <div className="absolute inset-[2px] rounded-full bg-[#050810] flex items-center justify-center">
-                  <span className="text-[10px] font-mono-label font-bold text-[#00e5cc]">N</span>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#b87916] to-[#ffd166] opacity-80" />
+                <div className="absolute inset-[2px] rounded-full bg-[#050505] flex items-center justify-center">
+                  <span className="text-[10px] font-mono-label font-bold text-[#ffd166]">N</span>
                 </div>
               </div>
               <div>
@@ -92,7 +92,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-10 h-10 rounded-xl border border-[rgba(120,140,220,0.15)] flex items-center justify-center text-[#8892b8] hover:text-white hover:border-[rgba(124,92,252,0.4)] transition-all"
+                  className="w-10 h-10 rounded-xl border border-[rgba(245,185,66,0.16)] flex items-center justify-center text-[#a99367] hover:text-white hover:border-[rgba(245,185,66,0.45)] transition-all"
                 >
                   {s.icon}
                 </a>
@@ -100,7 +100,7 @@ export default function Footer() {
             </div>
             <a
               href="#apply"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#7c5cfc] to-[#5b3de8] text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(124,92,252,0.4)] transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,185,66,0.4)] transition-all"
             >
               Join Our Agency
             </a>

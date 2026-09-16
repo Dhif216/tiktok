@@ -13,7 +13,7 @@ export default function AccountSupport() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 50% 60% at 0% 50%, rgba(124,92,252,0.12) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 50% 60% at 0% 50%, rgba(245,185,66,0.12) 0%, transparent 60%)',
         }}
       />
       <div className="max-w-7xl mx-auto px-6">
@@ -37,7 +37,7 @@ export default function AccountSupport() {
             </p>
             <a
               href="#apply"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#7c5cfc] to-[#5b3de8] text-white font-semibold text-sm px-6 py-3 rounded-full hover:shadow-[0_0_30px_rgba(124,92,252,0.4)] transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-sm px-6 py-3 rounded-full hover:shadow-[0_0_30px_rgba(245,185,66,0.4)] transition-all"
             >
               Get Protected
             </a>
@@ -47,7 +47,7 @@ export default function AccountSupport() {
           <div className="relative">
             <div
               className="absolute -inset-4 rounded-3xl opacity-30 blur-2xl pointer-events-none"
-              style={{ background: 'linear-gradient(135deg, rgba(124,92,252,0.3), rgba(0,229,204,0.2))' }}
+              style={{ background: 'linear-gradient(135deg, rgba(184,121,22,0.3), rgba(255,209,102,0.2))' }}
             />
             <div className="relative p-8 rounded-2xl border border-[rgba(120,140,220,0.15)] bg-[#0d1120]">
               <div className="flex items-center gap-3 mb-6">
@@ -64,7 +64,7 @@ export default function AccountSupport() {
                     key={issue}
                     className="flex items-center gap-3 p-3 rounded-xl bg-[#111928] border border-[rgba(120,140,220,0.08)]"
                   >
-                    <div className="w-5 h-5 rounded-full bg-gradient-to-br from-[#7c5cfc] to-[#00e5cc] flex items-center justify-center flex-shrink-0">
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-br from-[#b87916] to-[#ffd166] flex items-center justify-center flex-shrink-0">
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                         <path d="M2 5l2.5 2.5L8 2.5" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -74,9 +74,9 @@ export default function AccountSupport() {
                 ))}
               </div>
 
-              <div className="p-4 rounded-xl bg-gradient-to-r from-[rgba(124,92,252,0.1)] to-[rgba(0,229,204,0.08)] border border-[rgba(124,92,252,0.2)]">
+              <div className="p-4 rounded-xl bg-gradient-to-r from-[rgba(184,121,22,0.1)] to-[rgba(255,209,102,0.08)] border border-[rgba(245,185,66,0.2)]">
                 <p className="text-xs text-[#8892b8] leading-relaxed">
-                  <span className="text-[#00e5cc] font-semibold">Note:</span> We provide guidance and support — we cannot guarantee TikTok account restorations or override platform decisions. We are an independent creator agency.
+                  <span className="text-[#ffd166] font-semibold">Note:</span> We provide guidance and support — we cannot guarantee TikTok account restorations or override platform decisions. We are an independent creator agency.
                 </p>
               </div>
             </div>

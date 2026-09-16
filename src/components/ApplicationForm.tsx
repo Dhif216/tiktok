@@ -46,7 +46,7 @@ export default function ApplicationForm() {
     return (
       <section id="apply" className="py-20 md:py-28">
         <div className="max-w-2xl mx-auto px-6 text-center">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#7c5cfc] to-[#00e5cc] flex items-center justify-center text-4xl mx-auto mb-6">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#b87916] to-[#ffd166] flex items-center justify-center text-4xl mx-auto mb-6">
             ✓
           </div>
           <h2 className="font-display font-bold text-4xl text-white mb-4">Application Received</h2>
@@ -65,7 +65,7 @@ export default function ApplicationForm() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(124,92,252,0.08) 0%, transparent 70%)',
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(245,185,66,0.1) 0%, transparent 70%)',
         }}
       />
       <div className="max-w-3xl mx-auto px-6">
@@ -109,7 +109,7 @@ export default function ApplicationForm() {
               rows={4}
               required
               placeholder="Tell us about yourself and why you'd like to join the agency..."
-              className="w-full rounded-xl bg-[#111928] border border-[rgba(120,140,220,0.15)] text-[#f0f2ff] placeholder-[#8892b8] text-sm px-4 py-3 focus:outline-none focus:border-[rgba(124,92,252,0.5)] focus:ring-1 focus:ring-[rgba(124,92,252,0.3)] transition-colors resize-none"
+              className="w-full rounded-xl bg-[#0e0d0a] border border-[rgba(245,185,66,0.16)] text-[#fff8e7] placeholder-[#a99367] text-sm px-4 py-3 focus:outline-none focus:border-[rgba(245,185,66,0.55)] focus:ring-1 focus:ring-[rgba(245,185,66,0.3)] transition-colors resize-none"
             />
           </div>
 
@@ -125,8 +125,8 @@ export default function ApplicationForm() {
               <div
                 className="w-5 h-5 rounded border flex items-center justify-center transition-all"
                 style={{
-                  borderColor: consent ? '#7c5cfc' : 'rgba(120,140,220,0.3)',
-                  background: consent ? '#7c5cfc' : 'transparent',
+                  borderColor: consent ? '#f5b942' : 'rgba(245,185,66,0.3)',
+                  background: consent ? '#f5b942' : 'transparent',
                 }}
               >
                 {consent && (
@@ -147,11 +147,11 @@ export default function ApplicationForm() {
             className="w-full py-4 rounded-full font-semibold text-base transition-all"
             style={{
               background: consent
-                ? 'linear-gradient(135deg, #7c5cfc, #5b3de8)'
+                ? 'linear-gradient(135deg, #b87916, #f5b942)'
                 : 'rgba(120,140,220,0.15)',
               color: consent ? 'white' : '#8892b8',
               cursor: consent ? 'pointer' : 'not-allowed',
-              boxShadow: consent ? '0 0 30px rgba(124,92,252,0.3)' : 'none',
+              boxShadow: consent ? '0 0 30px rgba(245,185,66,0.3)' : 'none',
             }}
           >
             Submit Application
@@ -175,7 +175,7 @@ function Field({
         name={name}
         placeholder={placeholder}
         required={required}
-        className="w-full rounded-xl bg-[#111928] border border-[rgba(120,140,220,0.15)] text-[#f0f2ff] placeholder-[#8892b8] text-sm px-4 py-3 focus:outline-none focus:border-[rgba(124,92,252,0.5)] focus:ring-1 focus:ring-[rgba(124,92,252,0.3)] transition-colors"
+        className="w-full rounded-xl bg-[#0e0d0a] border border-[rgba(245,185,66,0.16)] text-[#fff8e7] placeholder-[#a99367] text-sm px-4 py-3 focus:outline-none focus:border-[rgba(245,185,66,0.55)] focus:ring-1 focus:ring-[rgba(245,185,66,0.3)] transition-colors"
       />
     </div>
   )
@@ -193,7 +193,7 @@ function SelectField({
         name={name}
         required={required}
         defaultValue=""
-        className="w-full rounded-xl bg-[#111928] border border-[rgba(120,140,220,0.15)] text-[#f0f2ff] text-sm px-4 py-3 focus:outline-none focus:border-[rgba(124,92,252,0.5)] focus:ring-1 focus:ring-[rgba(124,92,252,0.3)] transition-colors appearance-none"
+        className="w-full rounded-xl bg-[#0e0d0a] border border-[rgba(245,185,66,0.16)] text-[#fff8e7] text-sm px-4 py-3 focus:outline-none focus:border-[rgba(245,185,66,0.55)] focus:ring-1 focus:ring-[rgba(245,185,66,0.3)] transition-colors appearance-none"
         style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%238892b8' strokeWidth='1.5' fill='none' strokeLinecap='round'/%3E%3C/svg%3E\")", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center' }}
       >
         <option value="" disabled className="text-[#8892b8]">Select…</option>

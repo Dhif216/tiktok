@@ -5,7 +5,7 @@ export default function FinalCTA() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(124,92,252,0.2) 0%, rgba(0,229,204,0.08) 50%, transparent 70%)',
+            'radial-gradient(ellipse 80% 70% at 50% 50%, rgba(245,185,66,0.18) 0%, rgba(184,121,22,0.08) 50%, transparent 70%)',
         }}
       />
       {/* Grid overlay */}
@@ -32,13 +32,13 @@ export default function FinalCTA() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#apply"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#7c5cfc] to-[#5b3de8] text-white font-semibold text-base px-10 py-4 rounded-full hover:shadow-[0_0_50px_rgba(124,92,252,0.5)] transition-all hover:-translate-y-1"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-base px-10 py-4 rounded-full hover:shadow-[0_0_50px_rgba(245,185,66,0.45)] transition-all hover:-translate-y-1"
           >
             Become a Creator
           </a>
           <a
             href="#benefits"
-            className="w-full sm:w-auto inline-flex items-center justify-center border border-[rgba(120,140,220,0.25)] text-[#c8d0f0] font-medium text-base px-10 py-4 rounded-full hover:border-[rgba(124,92,252,0.5)] hover:text-white transition-all"
+            className="w-full sm:w-auto inline-flex items-center justify-center border border-[rgba(245,185,66,0.3)] text-[#f4dfaa] font-medium text-base px-10 py-4 rounded-full hover:border-[rgba(255,209,102,0.6)] hover:text-white transition-all"
           >
             Learn More
           </a>

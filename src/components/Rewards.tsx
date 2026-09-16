@@ -17,9 +17,9 @@ const tiers = [
     label: 'Coins / Month',
     desc: "You're building momentum. A bigger milestone means a bigger reward waiting for you.",
     bonus: 'Bigger Bonus',
-    color: '#7c5cfc',
-    glow: 'rgba(124,92,252,0.25)',
-    border: 'rgba(124,92,252,0.4)',
+    color: '#f5b942',
+    glow: 'rgba(245,185,66,0.22)',
+    border: 'rgba(245,185,66,0.42)',
   },
   {
     level: 'PRO',
@@ -27,9 +27,9 @@ const tiers = [
     label: 'Coins / Month',
     desc: "You're in the top tier. The pro milestone rewards creators who show up consistently.",
     bonus: 'Premium Bonus',
-    color: '#00e5cc',
-    glow: 'rgba(0,229,204,0.25)',
-    border: 'rgba(0,229,204,0.4)',
+    color: '#ffd166',
+    glow: 'rgba(255,209,102,0.2)',
+    border: 'rgba(255,209,102,0.42)',
     featured: true,
   },
   {
@@ -38,9 +38,9 @@ const tiers = [
     label: 'Coins / Month',
     desc: 'Elite status. Reserved for the creators who go all in. Exclusive rewards, exclusive recognition.',
     bonus: 'Exclusive Reward',
-    color: '#e040fb',
-    glow: 'rgba(224,64,251,0.25)',
-    border: 'rgba(224,64,251,0.4)',
+    color: '#b87916',
+    glow: 'rgba(184,121,22,0.22)',
+    border: 'rgba(184,121,22,0.42)',
   },
 ]
 
@@ -53,7 +53,7 @@ export default function Rewards() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(124,92,252,0.08) 0%, transparent 70%)',
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(245,185,66,0.08) 0%, transparent 70%)',
         }}
       />
       <div className="max-w-7xl mx-auto px-6">
@@ -86,7 +86,7 @@ export default function Rewards() {
               {t.featured && (
                 <div
                   className="section-label text-[9px] mb-3 inline-block px-2 py-1 rounded"
-                  style={{ background: 'rgba(0,229,204,0.15)', color: '#00e5cc' }}
+                  style={{ background: 'rgba(255,209,102,0.15)', color: '#ffd166' }}
                 >
                   MOST POPULAR
                 </div>

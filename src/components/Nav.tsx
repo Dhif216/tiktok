@@ -35,9 +35,9 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
         {/* Logo */}
         <a href="#" className="flex items-center gap-3 group">
           <div className="relative w-8 h-8">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#7c5cfc] to-[#00e5cc] opacity-80 group-hover:opacity-100 transition-opacity" />
-            <div className="absolute inset-[2px] rounded-full bg-[#050810] flex items-center justify-center">
-              <span className="text-[10px] font-mono-label font-bold text-[#00e5cc]">N</span>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#b87916] to-[#ffd166] opacity-80 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-[2px] rounded-full bg-[#050505] flex items-center justify-center">
+              <span className="text-[10px] font-mono-label font-bold text-[#ffd166]">N</span>
             </div>
           </div>
           <div>
@@ -62,7 +62,7 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
         {/* CTA */}
         <a
           href="#apply"
-          className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#7c5cfc] to-[#5b3de8] text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(124,92,252,0.5)] transition-all"
+          className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,185,66,0.45)] transition-all"
         >
           Join Our Agency
         </a>
@@ -111,7 +111,7 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
           <a
             href="#apply"
             onClick={() => setMenuOpen(false)}
-            className="mt-2 inline-flex items-center justify-center bg-gradient-to-r from-[#7c5cfc] to-[#5b3de8] text-white font-semibold px-6 py-3 rounded-full"
+            className="mt-2 inline-flex items-center justify-center bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold px-6 py-3 rounded-full"
           >
             Join Our Agency
           </a>

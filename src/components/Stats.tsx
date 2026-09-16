@@ -17,7 +17,7 @@ export default function Stats() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(180deg, transparent 0%, rgba(124,92,252,0.05) 50%, transparent 100%)',
+          background: 'linear-gradient(180deg, transparent 0%, rgba(245,185,66,0.06) 50%, transparent 100%)',
         }}
       />
       <div className="max-w-7xl mx-auto px-6">

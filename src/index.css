@@ -2,10 +2,10 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-background: #050810;
-  --color-foreground: #f0f2ff;
-  --color-primary: #7c5cfc;
-  --color-accent: #00e5cc;
+  --color-background: #050505;
+  --color-foreground: #fff8e7;
+  --color-primary: #f5b942;
+  --color-accent: #ffd166;
 }
 
 @layer base {
@@ -17,12 +17,12 @@
 
   html {
     scroll-behavior: smooth;
-    background-color: #050810;
+    background-color: #050505;
   }
 
   body {
-    background-color: #050810 !important;
-    color: #f0f2ff !important;
+    background-color: #050505 !important;
+    color: #fff8e7 !important;
     font-family: 'Outfit', system-ui, sans-serif !important;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -60,14 +60,14 @@
     width: 5px;
   }
   ::-webkit-scrollbar-track {
-    background: #050810;
+    background: #050505;
   }
   ::-webkit-scrollbar-thumb {
     background: #1a2240;
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #7c5cfc;
+    background: #f5b942;
   }
 }
 
@@ -81,7 +81,7 @@
   }
 
   .aurora-text {
-    background: linear-gradient(135deg, #7c5cfc 0%, #00e5cc 50%, #e040fb 100%);
+    background: linear-gradient(135deg, #b87916 0%, #ffd166 50%, #fff1b8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -92,7 +92,7 @@
     font-size: 11px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #00e5cc;
+    color: #ffd166;
     display: inline-block;
   }
 
@@ -148,9 +148,9 @@
     height: 96px;
     flex: 0 0 auto;
     padding: 0.75rem;
-    border: 1px solid rgba(224, 64, 251, 0.2);
+    border: 1px solid rgba(245, 185, 66, 0.24);
     border-radius: 1rem;
-    background: rgba(13, 17, 32, 0.72);
+    background: rgba(14, 13, 10, 0.82);
     box-shadow: 0 12px 30px rgba(5, 8, 16, 0.24);
   }
 

@@ -34,14 +34,51 @@ const coinRanges = [
   '1M+ / month',
 ]
 
+const recipientEmail = 'Ricky@asparagency.com'
+
 export default function ApplicationForm() {
   const [submitted, setSubmitted] = useState(false)
   const [consent, setConsent] = useState(false)
   const { translate } = useLanguage()
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setSubmitted(true)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const values = Object.fromEntries(formData.entries()) as Record<string, FormDataEntryValue>
+
+    const payload = {
+      name: values.name || '',
+      tiktok: values.tiktok || '',
+      email: values.email || '',
+      phone: values.phone || '',
+      country: values.country || '',
+      url: values.url || '',
+      followers: values.followers || '',
+      coins: values.coins || '',
+      category: values.category || '',
+      why: values.why || '',
+      _replyto: values.email || '',
+      _subject: `New Nordlys Creator Application from ${values.name || 'Applicant'}`,
+      _captcha: 'false',
+    }
+
+    try {
+      await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+
+      setSubmitted(true)
+    } catch (error) {
+      console.error('Form submission failed:', error)
+      alert('Something went wrong while sending your application. Please try again.')
+    }
   }
 
   if (submitted) {

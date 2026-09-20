@@ -54,16 +54,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="relative w-8 h-8">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#b87916] to-[#ffd166] opacity-80" />
-                <div className="absolute inset-[2px] rounded-full bg-[#050505] flex items-center justify-center">
-                  <span className="text-[10px] font-mono-label font-bold text-[#ffd166]">N</span>
-                </div>
-              </div>
-              <div>
-                <div className="font-display font-bold text-sm tracking-wide text-white">NORDLYS</div>
-                <div className="section-label text-[8px] opacity-60">CREATOR AGENCY</div>
-              </div>
+              <img
+                src="/logo.jpeg"
+                alt="Asapar Creator Agency logo"
+                className="site-logo-image site-logo-image-small"
+              />
             </div>
             <p className="text-sm text-[#8892b8] leading-relaxed max-w-xs">
               An independent creator agency built for TikTok creators who take their craft seriously. Support. Rewards. Community.
@@ -103,7 +98,9 @@ export default function Footer() {
               ))}
             </div>
             <a
-              href="#apply"
+              href="https://www.tiktok.com/t/ZSq7HuGAp/"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,185,66,0.4)] transition-all"
             >
               {translate('Join Our Agency')}
@@ -113,7 +110,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-[rgba(120,140,220,0.08)] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#8892b8] opacity-60">
-            © {new Date().getFullYear()} Nordlys Creator Agency. All rights reserved.
+            © {new Date().getFullYear()} Nordlys Asapar Creator Agency. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {legalLinks.map(l => (

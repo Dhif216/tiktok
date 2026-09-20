@@ -76,7 +76,9 @@ export default function WelcomeGift() {
           </p>
 
           <a
-            href="#apply"
+            href="https://www.tiktok.com/t/ZSq7HuGAp/"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-base px-8 py-4 rounded-full hover:shadow-[0_0_40px_rgba(245,185,66,0.4)] transition-all hover:-translate-y-0.5"
           >
             {translate('Apply Now')}

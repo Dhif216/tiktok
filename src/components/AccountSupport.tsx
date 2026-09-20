@@ -40,7 +40,9 @@ export default function AccountSupport() {
               promises we can't keep — but we'll always be in your corner.
             </p>
             <a
-              href="#apply"
+              href="https://www.tiktok.com/t/ZSq7HuGAp/"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-sm px-6 py-3 rounded-full hover:shadow-[0_0_30px_rgba(245,185,66,0.4)] transition-all"
             >
               {translate('Get Protected')}

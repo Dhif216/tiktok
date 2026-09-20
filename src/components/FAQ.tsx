@@ -44,13 +44,17 @@ const faqs = [
   },
 ]
 
-export default function FAQ() {
+interface FAQProps {
+  fullPage?: boolean
+}
+
+export default function FAQ({ fullPage = false }: FAQProps) {
   const [open, setOpen] = useState<number | null>(null)
   const { translate } = useLanguage()
 
   return (
-    <section id="faq" className="py-20 md:py-28">
-      <div className="max-w-3xl mx-auto px-6">
+    <section id="faq" className={fullPage ? 'py-24 md:py-32' : 'py-20 md:py-28'}>
+      <div className={fullPage ? 'max-w-4xl mx-auto px-6 pt-12 md:pt-20' : 'max-w-3xl mx-auto px-6'}>
         <div className="text-center mb-16">
           <div className="section-label mb-4">FAQ</div>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight">
@@ -88,7 +92,7 @@ export default function FAQ() {
               </button>
               <div
                 className="overflow-hidden transition-all duration-300"
-                style={{ maxHeight: open === i ? '200px' : '0' }}
+                style={{ maxHeight: open === i ? '220px' : '0' }}
               >
                 <p className="px-6 pb-5 text-sm text-[#8892b8] leading-relaxed">{translate(faq.a)}</p>
               </div>

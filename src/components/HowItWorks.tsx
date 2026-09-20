@@ -81,7 +81,9 @@ export default function HowItWorks() {
 
         <div className="mt-14 text-center">
           <a
-            href="#apply"
+            href="https://www.tiktok.com/t/ZSq7HuGAp/"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-base px-8 py-4 rounded-full hover:shadow-[0_0_40px_rgba(245,185,66,0.45)] transition-all hover:-translate-y-0.5"
           >
             {translate('Start Your Application')}

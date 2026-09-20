@@ -35,7 +35,9 @@ export default function FinalCTA() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#apply"
+            href="https://www.tiktok.com/t/ZSq7HuGAp/"
+            target="_blank"
+            rel="noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold text-base px-10 py-4 rounded-full hover:shadow-[0_0_50px_rgba(245,185,66,0.45)] transition-all hover:-translate-y-1"
           >
             {translate('Become a Creator')}

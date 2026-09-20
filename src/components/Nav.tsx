@@ -35,17 +35,12 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="relative w-8 h-8">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#b87916] to-[#ffd166] opacity-80 group-hover:opacity-100 transition-opacity" />
-            <div className="absolute inset-[2px] rounded-full bg-[#050505] flex items-center justify-center">
-              <span className="text-[10px] font-mono-label font-bold text-[#ffd166]">N</span>
-            </div>
-          </div>
-          <div>
-            <div className="font-display font-bold text-sm tracking-wide leading-none text-white">NORDLYS</div>
-            <div className="section-label text-[8px] leading-none mt-0.5 opacity-70">CREATOR AGENCY</div>
-          </div>
+        <a href="#" className="group flex items-center gap-3">
+          <img
+            src="/logo.jpeg"
+            alt="Asapar Creator Agency logo"
+            className="site-logo-image"
+          />
         </a>
 
         {/* Desktop links */}
@@ -63,7 +58,9 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
 
         {/* CTA */}
         <a
-          href="#apply"
+          href="https://www.tiktok.com/t/ZSq7HuGAp/"
+          target="_blank"
+          rel="noreferrer"
           className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,185,66,0.45)] transition-all"
         >
           {translate('Join Our Agency')}
@@ -125,7 +122,9 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
             </a>
           ))}
           <a
-            href="#apply"
+            href="https://www.tiktok.com/t/ZSq7HuGAp/"
+            target="_blank"
+            rel="noreferrer"
             onClick={() => setMenuOpen(false)}
             className="mt-2 inline-flex items-center justify-center bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black font-semibold px-6 py-3 rounded-full"
           >

@@ -1,3 +1,4 @@
+import logoImage from '../../logo.jpeg'
 import { useLanguage } from '../i18n'
 
 const navLinks = [
@@ -44,7 +45,11 @@ const socialLinks = [
   },
 ]
 
-export default function Footer() {
+type FooterProps = {
+  onOpenPrivacy?: () => void
+}
+
+export default function Footer({ onOpenPrivacy }: FooterProps) {
   const { translate } = useLanguage()
 
   return (
@@ -55,7 +60,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/logo.jpeg"
+                src={logoImage}
                 alt="Asapar Creator Agency logo"
                 className="site-logo-image site-logo-image-small"
               />
@@ -97,14 +102,23 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <a
-              href="https://www.tiktok.com/t/ZSq7HuGAp/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,185,66,0.4)] transition-all"
-            >
-              {translate('Join Our Agency')}
-            </a>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://www.tiktok.com/t/ZSq7HuGAp/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#b87916] to-[#f5b942] text-black text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(245,185,66,0.4)] transition-all"
+              >
+                {translate('Join Our Agency')}
+              </a>
+              <button
+                type="button"
+                onClick={onOpenPrivacy}
+                className="inline-flex items-center justify-center gap-2 border border-[rgba(245,185,66,0.25)] text-[#ffd166] text-sm font-semibold px-5 py-2.5 rounded-full hover:border-[rgba(245,185,66,0.6)] hover:text-white transition-all"
+              >
+                Privacy Policy
+              </button>
+            </div>
           </div>
         </div>
 

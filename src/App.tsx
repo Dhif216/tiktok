@@ -15,6 +15,7 @@ import { LanguageProvider } from './i18n'
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [privacyOpen, setPrivacyOpen] = useState(false)
   const [currentRoute, setCurrentRoute] = useState(() =>
     window.location.hash === '#faq' ? 'faq' : 'home',
   )
@@ -29,6 +30,13 @@ export default function App() {
   }, [menuOpen])
 
   useEffect(() => {
+    const dismissed = localStorage.getItem('nordlys-gdpr-dismissed') === 'true'
+    if (!dismissed) {
+      setPrivacyOpen(true)
+    }
+  }, [])
+
+  useEffect(() => {
     const handleHashChange = () => {
       setCurrentRoute(window.location.hash === '#faq' ? 'faq' : 'home')
     }
@@ -38,6 +46,15 @@ export default function App() {
   }, [])
 
   const isFaqRoute = currentRoute === 'faq'
+
+  const handlePrivacyChange = (value: boolean) => {
+    if (!value) {
+      localStorage.setItem('nordlys-gdpr-dismissed', 'true')
+    } else {
+      localStorage.removeItem('nordlys-gdpr-dismissed')
+    }
+    setPrivacyOpen(value)
+  }
 
   return (
     <LanguageProvider>
@@ -55,12 +72,12 @@ export default function App() {
               <Rewards />
               <AccountSupport />
               <WelcomeGift />
-              <ApplicationForm />
+              <ApplicationForm privacyOpen={privacyOpen} setPrivacyOpen={handlePrivacyChange} />
               <FinalCTA />
             </>
           )}
         </main>
-        <Footer />
+        <Footer onOpenPrivacy={() => handlePrivacyChange(true)} />
       </div>
     </LanguageProvider>
   )

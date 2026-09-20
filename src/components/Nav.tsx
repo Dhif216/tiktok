@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import logoImage from '../../logo.jpeg'
 import { useLanguage, type Language } from '../i18n'
 
 interface NavProps {
@@ -37,7 +38,7 @@ export default function Nav({ menuOpen, setMenuOpen }: NavProps) {
         {/* Logo */}
         <a href="#" className="group flex items-center gap-3">
           <img
-            src="/logo.jpeg"
+            src={logoImage}
             alt="Asapar Creator Agency logo"
             className="site-logo-image"
           />

@@ -36,7 +36,12 @@ const coinRanges = [
 
 const recipientEmail = 'Ricky@asparagency.com'
 
-export default function ApplicationForm() {
+type ApplicationFormProps = {
+  privacyOpen: boolean
+  setPrivacyOpen: (open: boolean) => void
+}
+
+export default function ApplicationForm({ privacyOpen, setPrivacyOpen }: ApplicationFormProps) {
   const [submitted, setSubmitted] = useState(false)
   const [consent, setConsent] = useState(false)
   const { translate } = useLanguage()
@@ -99,30 +104,75 @@ export default function ApplicationForm() {
   }
 
   return (
-    <section id="apply" className="py-20 md:py-28 relative overflow-hidden">
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(245,185,66,0.1) 0%, transparent 70%)',
-        }}
-      />
-      <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <div className="section-label mb-4">{translate('Apply Now')}</div>
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
-            {translate('Become a')}
-            <span className="aurora-text"> {translate('Nordlys creator.')}</span>
-          </h2>
-          <p className="text-[#8892b8] text-base">
-            Fill out your application below. We review every submission personally.
-          </p>
-        </div>
+    <>
+      {privacyOpen && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+          <button
+            type="button"
+            aria-label="Close privacy policy"
+            className="absolute inset-0 bg-black/75"
+            onClick={() => setPrivacyOpen(false)}
+          />
+          <div className="relative w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-3xl border border-[rgba(245,185,66,0.25)] bg-[#0d1120] p-6 md:p-8 shadow-[0_0_40px_rgba(0,0,0,0.45)]">
+            <div className="flex items-start justify-between gap-4 mb-6">
+              <div>
+                <div className="section-label mb-2">GDPR notice</div>
+                <h3 className="font-display text-3xl text-white">Privacy Policy & Data Consent</h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setPrivacyOpen(false)}
+                className="rounded-full border border-[rgba(245,185,66,0.25)] px-3 py-1.5 text-sm text-[#ffd166] hover:border-[rgba(245,185,66,0.6)] transition-colors"
+              >
+                Close
+              </button>
+            </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="p-8 md:p-10 rounded-3xl border border-[rgba(120,140,220,0.15)] bg-[#0d1120] space-y-6"
-        >
+            <div className="space-y-5 text-sm leading-7 text-[#c8d0f0]">
+              <p>
+                Nordlys Asapar Creator Agency collects personal data when you apply to join our creator network. This data is used to review your application, assess fit with our agency, and contact you about opportunities.
+              </p>
+              <p>
+                We may collect your name, email address, phone number, country, TikTok handle, profile URL, follower range, monthly creator performance information, content category, and the message you send in your application.
+              </p>
+              <p>
+                Your information is processed for the purpose of evaluating your candidacy, communicating with you, and managing creator partnerships. We do not sell personal data. We only share it with our internal team and the secure email service used to receive applications.
+              </p>
+              <p>
+                You have the right to access, update, delete, or withdraw consent for your data at any time. If you want to exercise these rights, contact us at <a href="mailto:Ricky@asparagency.com" className="text-[#ffd166] underline underline-offset-2">Ricky@asparagency.com</a>.
+              </p>
+              <p>
+                By submitting this form, you confirm that the information you provide is accurate and that you consent to Nordlys using your data for application review and follow-up communication.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <section id="apply" className="py-20 md:py-28 relative overflow-hidden">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background:
+              'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(245,185,66,0.1) 0%, transparent 70%)',
+          }}
+        />
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="section-label mb-4">{translate('Apply Now')}</div>
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-4">
+              {translate('Become a')}
+              <span className="aurora-text"> {translate('Nordlys creator.')}</span>
+            </h2>
+            <p className="text-[#8892b8] text-base">
+              Fill out your application below. We review every submission personally.
+            </p>
+          </div>
+
+          <form
+            onSubmit={handleSubmit}
+            className="p-8 md:p-10 rounded-3xl border border-[rgba(120,140,220,0.15)] bg-[#0d1120] space-y-6"
+          >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <Field label="Full Name" name="name" type="text" placeholder="Your full name" required />
             <Field label="TikTok Username" name="tiktok" type="text" placeholder="@yourusername" required />
@@ -152,33 +202,43 @@ export default function ApplicationForm() {
             />
           </div>
 
-          <label className="flex items-start gap-3 cursor-pointer group">
-            <div className="relative mt-0.5 flex-shrink-0">
-              <input
-                type="checkbox"
-                checked={consent}
-                onChange={e => setConsent(e.target.checked)}
-                className="sr-only"
-                required
-              />
-              <div
-                className="w-5 h-5 rounded border flex items-center justify-center transition-all"
-                style={{
-                  borderColor: consent ? '#f5b942' : 'rgba(245,185,66,0.3)',
-                  background: consent ? '#f5b942' : 'transparent',
-                }}
-              >
-                {consent && (
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                    <path d="M2 5l2.5 2.5L8 2" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                )}
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <label className="flex items-start gap-3 cursor-pointer group flex-1">
+              <div className="relative mt-0.5 flex-shrink-0">
+                <input
+                  type="checkbox"
+                  checked={consent}
+                  onChange={e => setConsent(e.target.checked)}
+                  className="sr-only"
+                  required
+                />
+                <div
+                  className="w-5 h-5 rounded border flex items-center justify-center transition-all"
+                  style={{
+                    borderColor: consent ? '#f5b942' : 'rgba(245,185,66,0.3)',
+                    background: consent ? '#f5b942' : 'transparent',
+                  }}
+                >
+                  {consent && (
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path d="M2 5l2.5 2.5L8 2" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  )}
+                </div>
               </div>
-            </div>
-            <span className="text-sm text-[#8892b8] leading-snug">
-              I agree that Nordlys Creator Agency may use my application details to review my candidacy and contact me. I understand this is an independent creator agency not affiliated with TikTok.
-            </span>
-          </label>
+              <span className="text-sm text-[#8892b8] leading-snug">
+                I agree that Nordlys Creator Agency may use my application details to review my candidacy and contact me. I understand this is an independent creator agency not affiliated with TikTok.
+              </span>
+            </label>
+
+            <button
+              type="button"
+              onClick={() => setPrivacyOpen(true)}
+              className="text-sm text-[#ffd166] underline underline-offset-2 decoration-[rgba(245,185,66,0.5)] hover:text-white transition-colors text-left"
+            >
+              View GDPR policy
+            </button>
+          </div>
 
           <button
             type="submit"
@@ -196,8 +256,9 @@ export default function ApplicationForm() {
             {translate('Submit Application')}
           </button>
         </form>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   )
 }
 

@@ -1,0 +1,19 @@
+{
+  "name": "Nordlys Asapar Creator Agency",
+  "short_name": "Nordlys",
+  "description": "Creator agency landing page and application portal for creators.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./logo.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
